@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(extra_context={'title': 'Store'}), name='index'),
     path('products/', include('products.urls', namespace='products')),
-
+    path('accounts/', include('allauth.urls')),
     path('users/', include('users.urls', namespace='users'))
 ]
 
